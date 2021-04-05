@@ -1,0 +1,49 @@
+.modal-overlay
+    opacity: 0
+    visibility: hidden
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 1000
+    background: rgba(#ECF0F3, 0.96)
+    backdrop-filter: blur(4px)
+    transition: all 0.25s
+    &--active
+        opacity: 1
+        visibility: visible
+
+.modal
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -35%)
+    z-index: 1001
+    display: none
+    opacity: 0
+    &--active
+        display: block
+        opacity: 1
+        transform: translate(-50%, -50%)
+        animation: fadeIn 1s ease
+    &__wrapper
+        min-width: 500px
+        width: fit-content
+        background: #FFF
+        border-radius: 5px
+
+@keyframes fadeIn
+    0%
+        display: none
+        opacity: 0
+        transform: translate(-50%, -35%)
+    1%
+        display: block
+        opacity: 0
+        transform: translate(-50%, -35%)
+    100%
+        opacity: 1
+        transform: translate(-50%, -50%)

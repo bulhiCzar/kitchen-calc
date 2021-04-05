@@ -1,0 +1,1917 @@
+@import "config" // Always at the beginning
+@import "breadcrumb"
+@import "swiper"
+@import "modal"
+
+.content
+    &--asunder
+        display: flex
+        min-height: 100vh
+        background: #ECF0F3
+    &--auth
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 100vh
+        background: #F4F5F8
+    &__wrapper
+        width: 50%
+        &--white
+            background: #FFF
+    &__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 30px
+    &__title
+        font-size: 24px
+        font-weight: 600
+        line-height: 29px
+        color: #000
+    &__link
+        font-size: 14px
+        font-weight: 600
+        text-transform: uppercase
+        color: #C0C9CD
+
+// NAVBAR
+.navbar
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 30px
+    &__info
+        display: flex
+        align-items: center
+    &__title
+        font-size: 14px
+        font-weight: 600
+        strong
+            font-family: $sfuidisplay-heavy
+            font-weight: 900
+            color: $coral-color
+    &__title + &__title
+        margin-left: 30px
+
+// SET
+.set-corps,
+.set-facades,
+.set-fittings
+    &__item
+        display: flex
+        align-items: flex-end
+        justify-content: space-between
+        padding: 25px 30px
+        background: #FFF
+        &--black
+            color: #FFF
+            background: #000
+        &--grey
+            align-items: center
+            color: #FFF
+            background: #292D32
+            .set-corps,
+            .set-facades,
+            .set-fittings
+                &__heading
+                    max-width: 100%
+                &__help
+                    margin-bottom: 0
+                    min-width: 84px
+        &--black,
+        &--grey
+            .set-corps,
+            .set-facades,
+            .set-fittings
+                &__select
+                    color: #FFF
+                    border: 3px solid #FFF
+                    &:focus,
+                    &:active
+                        outline: none
+                        border: 3px solid $coral-color
+                &__input
+                    color: #FFF
+                    border: 3px solid #FFF
+                    &::placeholder
+                        color: #FFF
+                    &:focus,
+                    &:active
+                        outline: none
+                        border: 3px solid $coral-color
+                &__btn
+                    background-color: transparent
+    &__group
+        margin-left: 15px
+        max-width: 130px
+        width: 100%
+        &--lg
+            max-width: 100%
+        &--sm
+            max-width: 100px
+            .input
+                text-align: center
+    &__group + &__btn
+        margin-left: 15px
+    &__heading
+        margin-left: 15px
+        max-width: 351px
+        width: 100%
+    &__heading + &__help,
+    &__heading + &__help + &__btn
+        margin-left: 10px
+    &__heading + &__help + &__btn + &__btn,
+    &__heading + &__help + &__btn + &__btn + &__btn
+        margin-left: 15px
+    &__help
+        display: block
+        margin-bottom: 15px
+        font-size: 18px
+        font-weight: 600
+    &__select
+        width: 100%
+    &__input
+        padding: 10px 13px
+        width: 100%
+        font-size: 16px
+        line-height: 19px
+        background: transparent
+    &__btn
+        display: flex
+        align-items: center
+        justify-content: center
+        max-width: 45px
+        max-height: 45px
+        min-width: 45px
+        min-height: 45px
+        width: 100%
+        height: 100%
+        font-size: 0
+        background-color: #ECF0F3
+        background-repeat: no-repeat
+        background-size: 20px
+        background-position: center center
+        border-radius: 5px
+        &--content
+            transition: all 0.5s
+            &:hover
+                font-size: 16px
+                color: $primary-color
+                background-position: top -100% center
+        &--accent
+            background-color: $coral-color
+        &--full-img
+            background-size: cover
+    &__btn + &__btn
+        margin-left: 15px
+    &__btn-plus
+        padding: 15px
+        width: 100%
+        height: 100%
+        font-size: 0
+        background-color: #ECF0F3
+        background-repeat: no-repeat
+        background-size: 20px
+        background-position: center center
+        border-radius: 5px
+
+.calculation-corps,
+.calculation-facades,
+.calculation-fittings
+    &__wrapper
+        padding: 36.5px 30px
+        background: #FFF
+        &--coral
+            color: #FFF
+            background: $coral-color
+            .calculation-corps__search,
+            .calculation-facades__search,
+            .calculation-fittings__search
+                background: #EC685E
+        &--green
+            color: #FFF
+            background: $green-color
+            .calculation-corps__search,
+            .calculation-facades__search,
+            .calculation-fittings__search
+                background: #5EB54E
+    &__item
+        display: flex
+        align-items: flex-end
+        &--ultra-width
+            .calculation-corps__group,
+            .calculation-facades__group,
+            .calculation-fittings__group
+                max-width: 100%
+                &--lg
+                    max-width: 100%
+    &__item + &__item
+        margin-top: 20px
+    &__group
+        width: 100%
+        &--lg
+            max-width: 120px
+        &--sm
+            max-width: 45px
+    &__btn + &__group,
+    &__group + &__group,
+    &__group + &__btn
+        margin-left: 15px
+    &__help
+        display: block
+        margin-bottom: 15px
+        font-size: 18px
+        font-weight: 600
+        &--img
+            margin-right: auto
+            margin-left: auto
+            width: 27px
+            height: 27px
+            background-repeat: no-repeat
+            background-size: 18px
+            background-position: center center
+    &__select
+        width: 100%
+        color: #FFF
+        border: 3px solid #FFF
+        &:active,
+        &:focus
+            border: 3px solid #ECF0F3
+    &__input
+        padding: 10px 13px
+        width: 100%
+        font-size: 16px
+        line-height: 19px
+        color: #FFF
+        background: transparent
+        border: 3px solid #FFF
+        &::placeholder
+            color: #FFF
+        &:active,
+        &:focus
+            border: 3px solid #ECF0F3
+    &__input--white
+        color: $primary-color
+        background: #FFF
+        &::placeholder
+            color: $primary-color
+    &__search
+        padding: 10px
+        width: 100%
+        font-size: 18px
+        font-weight: 600
+        line-height: 21px
+        text-align: center
+        color: #FFF
+        background: transparent
+        border: 1px solid transparent
+        border-radius: 10px
+        transition: border 0.5s
+        &::placeholder
+            color: #FFF
+        &:active,
+        &:focus
+            outline: none
+            border: 1px solid #FFF
+    &__btn
+        display: flex
+        align-items: center
+        justify-content: center
+        max-width: 45px
+        max-height: 45px
+        min-width: 45px
+        min-height: 45px
+        width: 100%
+        height: 100%
+        font-size: 0
+        background-color: transparent
+        background-repeat: no-repeat
+        background-size: 20px
+        background-position: center center
+        border-radius: 5px
+        &--accent
+            background-color: $coral-color
+        &--full-img
+            background-size: cover
+        &--white
+            font-size: 12px
+            font-weight: bold
+            color: $primary-color
+            background-color: #FFF
+            &:hover
+                color: $primary-color
+    &__btn + &__btn
+        margin-left: 15px
+
+.miscalculation
+    &__wrapper
+        position: relative
+        overflow: hidden
+        padding: 0 15px
+        margin: 30px
+        background: #FFF
+        border-radius: 10px
+        &--hidden
+            .miscalculation
+                &__inner
+                    display: none
+                &__roll-up
+                    transform: rotate(0)
+    &__inner
+        transition: height 0.5s
+    &__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 15px 0
+    &__title
+        font-weight: bold
+        strong
+            font-family: $sfuidisplay-heavy
+            font-weight: 900
+            color: $coral-color
+    &__settings
+        position: relative
+        z-index: 1
+        padding: 0
+        background-color: transparent
+        border: 0
+        &--active
+            svg path
+                fill: #FFF
+            + .miscalculation__panel
+                transform: translateX(0)
+                opacity: 1
+                display: flex
+                animation: fadeInRight 0.5s ease
+    &__panel
+        position: absolute
+        right: 0
+        transform: translateX(100%)
+        opacity: 0
+        display: flex
+        align-items: center
+        padding: 8px 45px 8px 18px
+        line-height: 14px
+        color: #FFF
+        background: $coral-color
+        border-radius: 5px 0 0 5px
+        animation: fadeInLeft 0.5s ease forwards
+    &__panel-item + &__panel-item
+        margin-left: 15px
+    &__panel-button
+        padding: 0
+        font-size: 12px
+        font-weight: 600
+        line-height: 14px
+        color: #FFF
+        background: transparent
+        border: 0
+    &__item
+        display: flex
+        align-items: center
+        padding: 15px 0 10px
+        font-size: 18px
+        font-weight: 600
+        line-height: 21px
+        color: #000000
+        border-bottom: 1px solid #ECF0F3
+        transition: background 0.5s
+    &__icon
+        margin-right: 10px
+    &__checkbox
+        display: none
+        &:checked
+            & ~ .miscalculation
+                &__icon
+                    svg path
+                        fill: $green-color
+    &__name
+        max-width: 410px
+        width: 100%
+        span
+            font-weight: normal
+    &__price,
+    &__meters,
+    &__amount
+        overflow: hidden
+        margin-left: auto
+        max-height: 21px
+        text-align: right
+    &__price
+        max-width: 83px
+        width: 100%
+    &__meters,
+    &__amount
+        max-width: 79px
+        width: 100%
+    &__meters
+        sup
+            top: -10px
+            font-size: 9px
+    &__btn
+        padding: 0
+        margin-left: 10px
+        background-color: transparent
+        border: 0
+        &:hover
+            svg path
+                fill: $coral-color
+    &__result
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 15px 0
+        font-size: 18px
+        font-weight: bold
+        color: #000
+    &__result-title
+        text-transform: uppercase
+    &__roll-up
+        padding: 0
+        transform: rotate(180deg)
+        width: 100%
+        height: 45px
+        background-color: transparent
+        background-image: url(../img/dist/sprite.svg#caret)
+        background-repeat: no-repeat
+        background-size: 14px
+        background-position: center center
+        border: 0
+        cursor: pointer
+        transition: transform 0.5s
+    &__add
+        padding: 12.5px
+        margin: 0 30px
+        width: calc(100% - 60px)
+        background: #FFF
+        border: 0
+        border-radius: 10px
+        &:hover,
+        &:active,
+        &:focus
+            outline: none
+            svg path
+                fill: $coral-color
+
+.btn-action
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 50px 0
+    &--grey
+        .btn-action__btn[disabled]
+            color: #C0C9CD
+            background: #ECF0F3
+    &__btn
+        width: fit-content
+        border-radius: 10px
+    &__btn[disabled]
+        color: #ECF0F3
+        background: #FFF
+    &__btn + &__btn
+        margin-left: 10px
+
+.miscalculation-tabs
+    margin: 0 -15px
+    & + .data__summary
+        margin-top: 30px
+    &__list
+        display: flex
+        align-items: center
+        justify-content: space-between
+        background: #000
+    &__item
+        width: 100%
+        height: 50px
+        text-align: center
+        &--active
+            .miscalculation-tabs__button
+                background-color: #292D32
+    &__button
+        width: 60px
+        height: 50px
+        background-color: transparent
+        background-repeat: no-repeat
+        background-size: 20px
+        background-position: center center
+        border: 0
+        border-radius: 10px 10px 0 0
+        transition: background 0.5s
+        &:hover
+            background-color: #292D32
+    &__content
+        display: none
+        padding-bottom: 15px
+        color: #fff
+        background: #292D32
+        &--active
+            display: block
+        .miscalculation
+            &__list--main
+                background: #292D32
+                &:last-child
+                    margin-bottom: -15px
+                > .miscalculation__list
+                    background: #000
+            &__item
+                padding: 15px
+                color: #FFF
+                border-bottom: 0
+        .upload-file
+            margin: 15px
+            background: #353A40
+            border: 1px dashed #FFFFFF
+    &__inner
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 15px
+    &__group
+        display: flex
+        align-items: center
+    &__mark
+        margin-right: 15px
+    &__title
+        font-size: 18px
+        font-weight: bold
+    &__more
+        overflow: hidden
+        margin: 15px 15px 0
+        color: #FFF
+        background: #484D53
+        border-radius: 10px
+    &__trigger
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 12px 25px
+        margin: 0 auto
+        width: calc(100% - 30px)
+        color: #FFF
+        background: #484D53
+        border: 0
+        border-radius: 10px
+        &--active
+            + .additional-services
+                display: block
+        &--title
+            font-size: 18px
+            font-weight: 600
+
+.services
+    padding: 0 15px
+    &__item
+        display: flex
+        align-items: center
+        padding: 15px 0
+        font-size: 18px
+        font-weight: 600
+        border-bottom: 1px solid #ECF0F3
+    &__mark
+        margin-right: 15px
+        &--accepted
+            svg path
+                fill: $green-color
+                fill-opacity: 1
+    &__discount,
+    &__price
+        padding: 10px
+        margin-left: auto
+        background: #484D53
+        border-radius: 10px
+    &__discount
+        margin-right: auto
+    &__icon
+        padding: 0
+        margin-left: 10px
+        width: 20px
+        height: 20px
+        background-color: transparent
+        background-repeat: no-repeat
+        background-size: 100%
+        background-position: center center
+        border: 0
+        &--plus
+            background-image: url(../img/dist/sprite.svg#plus-circle)
+        &--minus
+            background-image: url(../img/dist/sprite.svg#minus-circle)
+
+.additional-services
+    display: none
+    counter-reset: services-counter
+    &__item
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 15.5px 25px
+        font-size: 12px
+        line-height: 14px
+    &__name
+        &:before
+            counter-increment: services-counter
+            content: counter(services-counter) '. '
+    &__price
+        font-weight: 600
+        &:after
+            content: '₽'
+
+.data-form
+    margin: 0 30px
+    counter-reset: services-counter
+    &__title
+        padding: 10px 10px 10px 0
+        font-size: 18px
+        font-weight: 600
+        color: #000
+        &:before
+            counter-increment: services-counter
+            content: counter(services-counter) '. '
+    &__wrapper
+        margin: 10px 0 20px
+        .upload-file
+            margin-bottom: 20px
+            background: transparent
+            border: 2px dashed #ECF0F3
+            &__help
+                text-decoration: none
+                color: #ECF0F3
+    &__inner
+        display: flex
+        align-items: center
+        &--triple
+            .input
+                max-width: 31%
+            .input + .input
+                margin-left: 3.5%
+    &__inner + &__inner
+        margin-top: 20px
+    &__input
+        flex-grow: 1
+        line-height: 21px
+        color: $primary-color
+        border-radius: 10px
+        &--sm
+            max-width: 18%
+        &--md
+            max-width: 25%
+        &--lg
+            max-width: 30%
+    &__input + &__input
+        margin-left: 3%
+    &__textarea
+        flex-grow: 1
+        margin-top: 10px
+        height: 142px
+        resize: none
+    &__textarea[disabled]
+        display: block
+        height: 84px
+        width: 100%
+        &:active
+            border: 3px solid #ECF0F3
+    &__icon
+        margin-left: 10px
+        width: 45px
+        height: 45px
+        background-color: #ECF0F3
+        border: 0
+        border-radius: 5px
+        &:hover,
+        &:active,
+        &:focus
+            outline: none
+            svg path
+                fill: $coral-color
+    &__select
+        flex-grow: 1
+        margin-top: 10px
+        border-radius: 10px
+        &--ultra
+            display: block
+            width: 100%
+    &__select + &__input
+        margin-top: 15px
+
+.group-tabs
+    &__list
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-wrap: wrap
+        margin: 30px 0
+    &__item
+        margin-top: 10px
+        &--active
+            .group-tabs
+                &__button
+                    color: $primary-color
+                    background: #FFF
+                    &--mark
+                        svg path
+                            fill: $green-color
+                    &--icon
+                        svg path
+                            fill: $primary-color
+    &__item + &__item
+        margin-left: 30px
+    &__button
+        padding: 15px
+        color: #ECF0F3
+        background: #C0C9CD
+        border: 0
+        border-radius: 10px
+        transition: color 0.5s, background 0.5s
+        &--mark
+            margin-right: 10px
+        &--title
+            font-size: 14px
+            font-weight: 600
+            text-transform: uppercase
+            text-align: center
+        &--icon
+            margin-left: 10px
+    &__content
+        display: none
+        &--active
+            display: block
+
+.data
+    padding-bottom: 30px
+    &__wrapper
+        overflow: hidden
+        margin: 30px
+        background: #FFF
+        border-radius: 10px
+    &__inner
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 15px
+        font-size: 18px
+        &--act
+            font-weight: 600
+            color: #FFF
+            background: $coral-color
+            .data__price
+                max-width: 100%
+        &--trigger
+            color: #C0C9CD
+            cursor: pointer
+            .data__title
+                max-width: 100%
+        &--active
+            .data
+                &__icon
+                    svg path
+                        fill: $green-color
+                &__title
+                    &--title
+                        color: $primary-color
+                    &--accent
+                        color: $coral-color
+                &__trigger
+                    transform: rotate(180deg)
+            & + .data__content
+                display: block
+    &__group
+        display: flex
+        align-items: center
+    &__icon
+        margin-top: -2px
+        margin-right: 10px
+    &__checkbox
+        display: none
+        & ~ .data
+            &__title,
+            &__meters,
+            &__price
+                color: #C0C9CD
+        &:checked
+            & ~ .data
+                &__icon
+                    svg path
+                        fill: $green-color
+                &__title,
+                &__meters,
+                &__price
+                    color: #000
+    &__title
+        font-weight: 600
+        transition: color 0.5s
+        &--title,
+        &--accent
+            transition: color 0.5s
+        &--title
+            font-weight: 600
+        &--sub
+            font-weight: normal
+    &__discount
+        max-width: 65px
+        font-weight: bold
+        text-align: right
+        color: $coral-color
+        border: 0
+        &::after
+            content: '%'
+        &:focus
+            outline: none
+    &__trigger
+        background: transparent
+        border: 0
+        transition: transform 0.5s
+    &__content
+        display: none
+        .miscalculation-tabs
+            margin-bottom: 15px
+            &__content
+                padding: 0 15px
+    &__list
+        padding: 0 15px
+    &__item
+        display: flex
+        align-items: center
+        padding: 15px 0 10px
+        font-size: 18px
+        font-weight: 600
+        color: #000
+        border-bottom: 1px solid #ECF0F3
+    &__title
+        max-width: 298px
+        width: 100%
+        font-weight: normal
+        strong
+            font-weight: 600
+    &__meters
+        margin-left: auto
+        transition: color 0.5s
+    &__input
+        padding: 10px
+        margin-left: auto
+        max-width: 68px
+        width: 100%
+        font-size: 18px
+        font-weight: 600
+        line-height: 21px
+        text-align: right
+        color: #FFF
+        background: $coral-color
+        border: 0
+        border-radius: 10px
+    &__price
+        margin-left: 34px
+        max-width: 83px
+        width: 100%
+        text-align: right
+        transition: color 0.5s
+        &::after
+            content: ' ₽'
+    &__print
+        padding: 0
+        margin-bottom: 7px
+        width: 100%
+        height: 43px
+        background-color: transparent
+        background-image: url(../img/dist/sprite.svg#print)
+        background-repeat: no-repeat
+        background-size: 20px
+        background-position: center center
+        border: 0
+    &__summary
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 12px 25px
+        margin: 15px 25px
+        color: #FFF
+        background: $green-color
+        border-radius: 10px
+    &__amount
+        font-size: 18px
+        font-weight: 600
+    &__reset
+        font-size: 14px
+        text-decoration: underline
+        &:hover
+            text-decoration: underline
+    &__add
+        display: block
+        padding: 12.5px
+        margin: 0 auto
+        width: calc(100% - 60px)
+        border: 0
+        background: #FFFFFF
+        border-radius: 10px
+        &:hover,
+        &:active,
+        &:focus
+            outline: none
+            svg path
+                fill: $coral-color
+
+// HEADING LINE
+.heading
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 30px
+    &__title
+        font-family: $rubik
+        font-size: 24px
+        font-weight: 500
+        color: #000000
+    &__settings
+        font-size: 0
+        background: transparent
+        border: 0
+        &--active
+            svg path
+                fill: $coral-color
+
+// AUTH FORM
+.auth-form
+    padding: 15px
+    max-width: 500px
+    width: 100%
+    background: #FFF
+    border-radius: 5px
+    &__inner
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__title
+        font-size: 14px
+        font-weight: 600
+        strong
+            font-weight: bold
+            color: $coral-color
+    &__promo
+        font-size: 24px
+        font-weight: bold
+        color: $primary-color
+        strong
+            font-family: $sfuidisplay-heavy
+            font-weight: 900
+            color: $coral-color
+    &__logotype
+        display: block
+        padding: 9px 0 15px 15px
+        width: fit-content
+    &__input
+        margin-top: 15px
+        width: 100%
+    &__radio-group
+        display: flex
+        align-items: center
+        margin-top: 15px
+    &__checkbox-group
+        margin: 15px 0 10px
+    &__btn
+        margin-top: 15px
+        text-align: left
+        border-radius: 5px
+        &::before
+            content: ''
+            display: inline-block
+            position: absolute
+            top: 50%
+            right: 3px
+            transform: translateY(-50%)
+            width: 45px
+            height: 45px
+            background-color: #FFF
+            background-image: url(../img/dist/sprite.svg#arrow-right)
+            background-repeat: no-repeat
+            background-size: 16px
+            background-position: center center
+            border-radius: 5px
+            transition: background 0.5s
+        &:hover
+            &::before
+                background-position: center right 8px
+
+// CUSTOM CHECKBOX
+.custom-checkbox
+    margin: 0
+    max-width: 105px
+    width: 100%
+    cursor: pointer
+    & + .custom-checkbox
+        margin-left: 15px
+    &__input
+        display: none
+        &:checked
+            ~ .custom-checkbox__group
+                background: #ECF0F3
+                border: 3px solid transparent
+                &::before
+                    opacity: 1
+                .custom-checkbox__icon
+                    svg circle,
+                    svg path
+                        fill: $primary-color
+                .custom-checkbox__title
+                    color: $primary-color
+    &__group
+        position: relative
+        display: block
+        padding: 20px 10px
+        margin: 0
+        color: #C0C9CD
+        border: 3px solid #ECF0F3
+        border-radius: 5px
+        transition: border 0.5s, background 0.5s
+        &::before
+            content: ''
+            display: inline-block
+            position: absolute
+            top: 5px
+            right: 5px
+            width: 16px
+            height: 16px
+            opacity: 0
+            background-image: url(../img/dist/sprite.svg#green-mark)
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center center
+            transition: opacity 0.5s
+    &__title
+        display: block
+        font-size: 14px
+        font-weight: 600
+        text-align: center
+        transition: color 0.5s
+
+.small-checkbox
+    margin: 0
+    width: 100%
+    cursor: pointer
+    & + .input
+        margin-top: 0
+        margin-bottom: 15px
+    &__input
+        display: none
+        &:checked
+            ~ .small-checkbox__group
+                .small-checkbox__icon
+                    svg circle,
+                    svg path
+                        fill: #6DCC5C
+                .small-checkbox__title--text
+                    color: $primary-color
+                .small-checkbox__title--type
+                        color: $coral-color
+    &__group
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 15px
+        margin: 0
+        color: #C0C9CD
+    &__icon
+        display: inline-block
+        margin-right: 10px
+        svg circle,
+        svg path
+            transition: 0.5s
+    &__title
+        display: inline-block
+        font-size: 14px
+        font-weight: 600
+        text-align: center
+        transition: color 0.5s
+        span
+            transition: color 0.5s
+
+// APPLICATIONS
+.applications
+    margin: 45px auto 0
+    &__input
+        padding: 21px
+        width: 100%
+        text-align: center
+        border: 3px solid transparent
+        border-radius: 0
+        &::placeholder
+            text-decoration: underline
+        &:focus,
+        &:active
+            border: 3px solid transparent
+        &--comment
+            padding: 15px
+            margin: 6px 85px 6px 10px 
+            max-width: 435px
+            width: 100%
+            font-size: 18px
+            line-height: 21px
+            text-align: left
+            &::placeholder
+                text-decoration: none
+    &__btn
+        padding: 24px
+        text-decoration: underline
+        text-align: center
+        background: #3C545C
+    &__list
+        max-height: calc(100vh - 75px - 75px - 36px - 50px - 55px)
+        min-width: 100%
+        overflow: scroll
+    &__item
+        position: relative
+        display: flex
+        align-items: center
+        min-width: 1440px
+        width: 100%
+        font-size: 18px
+        font-weight: 600
+        text-align: center
+        background: #ECF0F3
+        &:first-child
+            background: #FFF
+        &--yellow
+            background: #FEC800
+        &--green
+            background: #6DCC5C
+        &--red
+            background: #FB837A
+    &__calc-btn
+        min-width: 75px
+        min-height: 75px
+        max-width: 75px
+        background: #C0C9CD
+        border: 0
+        &::before
+            content: ''
+            display: inline-block
+            width: 45px
+            height: 45px
+            background-image: url(../img/dist/sprite.svg#calculation-white)
+            background-repeat: no-repeat
+            background-size: 100%
+            background-position: center center
+            transition: transform 0.5s
+        &--empty
+            background: transparent
+            &::before
+                display: none
+    &__title
+        display: block
+        padding: 29px 10px
+        width: 100%
+        font-size: 14px
+        line-height: 17px
+        text-align: left
+        &--id
+            max-width: 75px
+        &--data
+            max-width: 110px
+        &--manager
+            max-width: 250px
+        &--lead-src
+            max-width: 155px
+        &--client
+            max-width: 170px
+        &--phone
+            max-width: 150px
+        &--comment
+            margin-right: 105px
+            max-width: 100%
+        &--id,
+        &--data,
+        &--manager,
+        &--lead-src
+            &::after
+                content: ''
+                display: inline-block
+                margin-left: 10px
+                width: 16px
+                height: 16px
+                vertical-align: middle
+                background-image: url(../img/dist/sprite.svg#sort)
+                background-repeat: no-repeat
+                background-size: cover
+                background-position: center center
+    &__text
+        display: block
+        padding: 6px 10px
+        width: 100%
+        line-height: 21px
+        text-align: left
+        &--id
+            max-width: 75px
+        &--data
+            max-width: 110px
+        &--manager
+            max-width: 250px
+            img
+                margin-right: 8px
+                max-width: 40px
+                border-radius: 50%
+        &--lead-src
+            max-width: 155px
+        &--client
+            max-width: 170px
+        &--phone
+            max-width: 150px
+    &__trigger
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        padding: 0
+        margin-left: auto
+        min-width: 75px
+        min-height: 75px
+        max-width: 75px
+        background: rgba(#FFFFFF, 0.5)
+        border: 0
+        &::before
+            content: ''
+            display: inline-block
+            width: 16px
+            height: 16px
+            background-image: url(../img/dist/sprite.svg#caret)
+            background-repeat: no-repeat
+            background-size: 100%
+            background-position: center center
+            transition: transform 0.5s
+        &--sort
+            &::before
+                background-image: url(../img/dist/sprite.svg#sort)
+
+// SETTINGS
+.settings
+    display: flex
+    align-items: flex-start
+    margin: 30px
+    &__content
+        padding: 0 0 0 30px
+        width: 100%
+    &__heading
+        font-family: $rubik
+        font-size: 18px
+        font-weight: 500
+        color: #313131
+        &--input
+            display: block
+            padding: 10px
+            border: 0
+            border-radius: 5px
+            transition: background 0.5s
+            &:hover,
+            &:focus
+                background: #ECF0F3
+            &:focus
+                outline: none
+        &--lg
+            min-width: 256px
+    &__block
+        display: flex
+        align-items: flex-end
+    &__icon
+        margin-left: 10px
+        width: 51px
+        height: 51px
+        background-color: #ECF0F3
+        border: 0
+        border-radius: 5px
+        &:hover,
+        &:active,
+        &:focus
+            outline: none
+            svg path
+                fill: $coral-color
+    &__textarea
+        display: block
+        padding: 15px
+        margin-top: 15px
+        margin-bottom: 25px
+        width: 100%
+        height: 115px
+        background: #ECF0F3
+        border: 0
+        border-radius: 5px
+        resize: none
+        &:focus
+            outline: none
+    &__title
+        margin-top: 25px
+        font-size: 24px
+        font-weight: 600
+        color: #292D32
+    &__subtitle
+        margin-top: 14px
+        font-size: 14px
+        font-weight: 600
+        color: #000000
+    &__list
+        display: flex
+        flex-wrap: wrap
+        margin: 15px 0 25px
+    &__item
+        overflow: hidden
+        margin-right: 24px
+        margin-bottom: 15px
+        max-width: 125px
+        max-height: 125px
+        width: 100%
+        height: 100%
+        border-radius: 10px
+    &__wrapper
+        &--limiter
+            max-width: 425px
+            .upload-file
+                margin-top: 6px
+    &__inner
+        display: flex
+        align-items: flex-start
+        margin-top: 25px
+    &__input
+        padding: 14px 15px
+        margin-top: 9px
+        width: 100%
+        font-size: 14px
+        font-weight: 600
+        background: #ECF0F3
+        border: 1px solid transparent
+        border-radius: 10px
+        transition: border 0.5s
+        &--fit
+            display: block
+            min-width: 425px
+            width: fit-content
+        &:focus,
+        &:active
+            outline: none
+            border: 1px solid $primary-color
+    &__download
+        margin-top: 9px
+        font-size: 14px
+        font-weight: 600
+        color: #000000
+    &__help
+        display: block
+        margin-top: 14px
+        font-size: 14px
+        font-weight: 600
+        color: #ADC8A8
+        &:hover
+            color: #ADC8A8
+        &::before
+            content: ''
+            display: inline-block
+            margin-right: 5px
+            width: 16px
+            height: 16px
+            vertical-align: middle
+            background-image: url(../img/dist/sprite.svg#play)
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center center
+    &__btn
+        color: #C0C9CD
+        background: #ECF0F3
+        border-radius: 10px
+        &:hover
+            color: #C0C9CD
+    &__information
+        padding: 15px
+        background: #ECF0F3
+        border-radius: 10px
+        &--black
+            color: #FFF
+            background: #292D32
+            .settings__value
+                color: #FFF
+                &--empty
+                    color: #000000
+            .settings__key
+                background: #292D32
+    &__column
+        max-width: 300px
+        width: 100%
+        &--horizontal
+            display: flex
+            max-width: 375px
+            .settings__information
+                max-width: 300px
+                width: 100%
+            .settings__add
+                display: flex
+                align-items: center
+                margin-top: 0
+                margin-left: 25px
+                padding: 0 9px
+                width: auto
+                background: #ECF0F3
+    &__column + &__column
+        margin-left: 15px
+    &__suptitle
+        margin-bottom: 2px
+        font-size: 18px
+        font-weight: 600
+    &__group
+        position: relative
+        margin-top: 25px
+        height: 40px
+    &__key
+        position: absolute
+        left: 1rem
+        top: 1.1rem
+        z-index: 10
+        display: block
+        padding: 0 5px
+        font-size: 12px
+        font-weight: 600
+        line-height: 14px
+        color: #C0C9CD
+        background: #ECF0F3
+        transition: all 0.5s
+    &__value
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 1
+        display: block
+        padding: 10px
+        margin-top: 5px
+        width: 100%
+        height: 100%
+        font-size: 14px
+        font-weight: 600
+        line-height: 17px
+        color: #292D32
+        background: transparent
+        border: 1px solid #C0C9CD
+        border-radius: 5px
+        transition: all 0.5s
+        &:focus + .settings__key
+            top: -.2rem
+            left: .8rem
+        &:not(:placeholder-shown).settings__value:not(:focus) + .settings__key
+            top: -.2rem
+            left: .8rem
+        &:focus,
+        &:active
+            outline: none
+    &__make-main
+        margin-top: 15px
+        font-size: 16px
+        font-weight: 600
+        &::before
+            content: ''
+            display: inline-block
+            margin-top: -1px
+            margin-right: 10px
+            width: 16px
+            height: 16px
+            vertical-align: middle
+            background-image: url(../img/dist/sprite.svg#empty-green-mark)
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center center
+    &__add
+        padding: 6px
+        margin-top: 14px
+        width: 100%
+        text-align: center
+        background: #292D32
+        border-radius: 10px
+        &::before
+            content: ''
+            display: inline-block
+            width: 32px
+            height: 32px
+            vertical-align: middle
+            background-image: url(../img/dist/sprite.svg#add)
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center center
+    &__user-details
+        display: flex
+    &__user-info
+        margin-left: 15px
+    &__user-img
+        overflow: hidden
+        max-width: 75px
+        max-height: 75px
+        width: 100%
+        height: 100%
+        border-radius: 10px
+        .upload-file__label
+            padding: 18.5px 0
+    &__user-name
+        display: block
+        font-size: 14px
+        font-weight: 600
+        line-height: 17px
+        color: #292D32
+    &__user-position
+        display: block
+        margin-top: 5px
+        font-size: 12px
+        font-weight: 600
+        line-height: 14px
+        color: #C0C9CD
+
+// UPLOAD FILE
+.upload-file
+    background: #ECF0F3
+    border: 3px dashed #C0C9CD
+    border-radius: 10px
+    &__input
+        position: absolute
+        z-index: -1
+        overflow: hidden
+        width: 0.4px
+        height: 0.4px
+        opacity: 0
+    &__label
+        padding: 43.5px 0
+        margin: 0
+        width: 100%
+        height: 100%
+        text-align: center
+        cursor: pointer
+    &__icon
+        display: block
+        margin: 0 auto
+        max-width: 32px
+        max-height: 32px
+        min-width: 32px
+        min-height: 32px
+        cursor: pointer
+    &__help
+        display: block
+        margin-top: 7px
+        font-size: 12px
+        color: #C0C9CD
+        text-decoration: underline
+
+// CATEGORY
+.category
+    max-width: 283px
+    width: 100%
+    background: #F8F8F8
+    border-radius: 10px
+    &__item
+        padding: 10px 8px
+        font-family: $rubik
+        font-size: 16px
+        font-weight: normal
+        color: #000000
+        border-left: 7px solid transparent
+        &--active
+            padding: 10px
+            font-size: 18px
+            color: $coral-color
+            border-left: 7px solid $coral-color
+    &__item + &__item
+        margin-top: 10px
+
+.subcategory
+    margin-bottom: 10px
+    &__item
+        padding: 10px 30px
+        margin-top: 10px
+        font-family: $rubik
+        font-size: 14px
+        color: #000
+        &--active
+            color: $coral-color
+
+// SECTION MAIN
+.main
+    display: flex
+    align-items: center
+    &__left
+        flex: 0 0 100%
+    &__content
+        padding: 30px 10px
+        width: 49%
+    &__review
+        padding: 10px
+        margin-top: 42px
+        max-width: 591px
+        font-size: 18px
+        text-align: center
+        color: #000000
+        background: #ECF0F3
+        border-radius: 10px
+    &__right
+        flex: 0 0 50%
+        transform: translateX(-100%)
+
+// SECTION OFFERS
+.offers
+    padding-bottom: 50px
+    background: #ECF0F3
+
+// TABS
+.tabs
+    width: 100%
+    &__list
+        position: relative
+        z-index: 0
+        display: flex
+        align-items: center
+        width: fit-content
+    &__item
+        transition: background 0.5s
+        &--active
+            .tabs__button
+                color: #FFF
+                background: #000000
+    &__item + &__item
+        margin-left: 30px
+    &__button
+        padding: 50px
+        font-size: 24px
+        font-weight: 600
+        color: #3F3E3E
+        background: rgba(#C0C9CD, 0.23)
+        border: 1px solid transparent
+        transition: all 0.5s
+        span
+            display: block
+            font-weight: bold
+        &:focus,
+        &:active
+            outline: none
+            box-shadow: 0 0 15px rgba(#000, 0.1)
+    &__select
+        padding: 20px
+        width: 100%
+        font-size: 26px
+        font-weight: 600
+        line-height: 100%
+        color: #FFF
+        background-color: #000
+        background-image: url(../img/dist/sprite.svg#caret-white)
+        background-size: 20px
+    &__content
+        display: none
+        padding: 30px
+        background: #FFF
+        &--active
+            display: block
+    &__title
+        padding: 15px
+        font-size: 24px
+        font-weight: bold
+        color: #000000
+    &__wrapper
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 40px
+    &__comment
+        display: flex
+        align-items: center
+        padding: 15px
+    &__ava
+        overflow: hidden
+        margin-right: 10px
+        max-width: 50px
+        max-height: 50px
+        width: 100%
+        height: 100%
+        border-radius: 50%
+    &__text
+        padding: 10px
+        font-size: 18px
+        font-weight: 500
+        font-style: italic
+        color: #000
+        background: #ECF0F3
+
+// CORPS
+.corps,
+.facades,
+.fittings
+    &__item
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 10px 0
+        margin: 0 15px
+        color: #000000
+        border-bottom: 1px solid #ECF0F3
+    &__name
+        font-size: 18px
+        font-weight: normal
+        line-height: 21px
+        strong
+            font-weight: 600
+    &__profile,
+    &__price
+        font-size: 18px
+        font-weight: 600
+    &__bottom
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        padding: 30px 15px
+    &__btn
+        padding: 11px 25px
+    &__summary
+        margin-left: 50px
+    &__summary--title,
+    &__summary--price
+        display: block
+        color: #000
+    &__summary--title
+        font-size: 18px
+        font-weight: 600
+        line-height: 21px
+    &__summary--price
+        font-size: 24px
+        font-weight: 600
+        line-height: 29px
+
+// SERVICES
+.service
+    margin-bottom: 35px
+    &__item
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 10px 0
+        margin: 0 15px
+        color: #000000
+    &__name
+        font-size: 18px
+        font-weight: normal
+        line-height: 21px
+        strong
+            font-weight: 600
+    &__price
+        font-size: 18px
+        font-weight: 600
+    &__pdf
+        width: 25px
+        height: 30px
+        &::before
+            content: ''
+            display: inline-block
+            width: 25px
+            height: 30px
+            background-image: url(../img/dist/sprite.svg#pdf)
+            background-repeat: no-repeat
+            background-size: 100%
+            background-position: center center
+
+// ABOUT
+.about
+    margin: 0 auto
+    max-width: 219px
+    text-align: center
+    &__img
+        position: relative
+        display: flex
+        align-items: flex-end
+        justify-content: flex-end
+        overflow: hidden
+        max-width: 185px
+        max-height: 196px
+        min-width: 185px
+        min-height: 196px
+        border-radius: 50%
+        img
+            max-width: 175px
+            max-height: 175px
+            width: 100%
+            height: 100%
+            border-radius: 50%
+        &::before
+            content: ''
+            display: inline-block
+            position: absolute
+            top: 0
+            left: 0
+            z-index: -1
+            width: 175px
+            height: 175px
+            background: #ECF0F3
+            border-radius: 50%
+    &__name
+        margin-top: 21px
+        font-size: 24px
+        font-weight: bold
+        line-height: 29px
+        color: #000000
+    &__contacts
+        margin-top: 40px
+    &__help
+        display: block
+        font-size: 18px
+        line-height: 21px
+        color: #000000
+
+// SECTION TITLE
+.section-heading
+    font-size: 24px
+    font-weight: bold
+    color: #000000
+    &--padding
+        padding: 50px 0 30px
+        font-size: 36px
+
+// SECTION WORKS
+.works
+    &__wrapper
+        display: flex
+        flex-wrap: wrap
+    &__item
+        max-width: 420px
+        max-height: 420px
+        width: 100%
+        height: 100%
+        &:nth-child(3n - 1)
+            margin: 0 40px
+        &:nth-child(n + 4)
+            margin-top: 40px
+    &__more
+        display: block
+        padding: 30px
+        margin: 50px auto 30px
+        width: fit-content
+        font-size: 24px
+        font-weight: bold
+        text-align: center
+        color: #FFF
+        background: #000000
+        &:hover
+            color: #FFF
+
+// SECTION VIDEO
+.video
+    padding-bottom: 50px
+
+// SECTION PROMOTIONS
+.promotions
+    padding: 27px 0 57px
+    background: #ECF0F3
+
+// SECTION INTEREST
+.interest
+    padding: 72.5px 0 62.5px
+    text-align: center
+    &__form
+        padding: 10px
+        margin-top: 10px
+    &__btn
+        padding: 10px 40px
+        font-size: 24px
+        font-weight: bold
+        text-align: center
+        color: #000000
+        background: transparent
+        border: 0
+        &--accent
+            color: #FFF
+            background: #000000
+    &__btn + &__btn
+        margin-left: 10px
+
+// SECTION FEEDBACK
+.feedback
+    padding: 66.5px 0
+    text-align: center
+    background: #ECF0F3
+
+// KEYFRAMES
+@keyframes fadeInRight
+    0%
+        display: none
+        opacity: 0
+        transform: translateX(100%)
+    1%
+        display: flex
+        opacity: 0
+        transform: translateX(100%)
+    100%
+        opacity: 1
+        transform: translateX(0)
+
+@keyframes fadeInLeft
+    0%
+        display: flex
+        opacity: 1
+        transform: translateX(0)
+    10%
+        display: flex
+        opacity: 1
+        transform: translateX(0)
+    99%
+        display: flex
+        opacity: 0
+        transform: translateX(100%)
+    100%
+        display: none
+        opacity: 0
+        transform: translateX(100%)
+
+// MEDIA QUARIES
+@import "media"

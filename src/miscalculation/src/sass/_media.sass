@@ -1,0 +1,135 @@
+@media (min-width: 1600px)
+    .applications
+        &__title,
+        &__text
+            &--id,
+            &--data,
+            &--manager,
+            &--lead-src,
+            &--client,
+            &--phone,
+            &--comment
+                max-width: 100%
+
+@media (max-width: 1439px)
+    .tabs
+        &__elem
+            max-width: 32%
+            &:nth-child(3n - 1)
+                margin: 0 2%
+    .works
+        &__item
+            max-width: 32%
+            &:nth-child(3n - 1)
+                margin: 0 2%
+            &:nth-child(n + 4)
+                margin-top: 2%
+
+@media (min-width: 1200px)
+    .scroll-disabled-desktop
+        overflow: hidden
+    .content
+        &__wrapper
+            max-height: 100vh
+            overflow-y: scroll
+
+@media (max-width: 1199px)
+    .main
+        &__content
+            width: 100%
+        &__review
+            margin: 42px auto 0
+        &__right
+            display: none
+
+@media (max-width: 1199px)
+    .content
+        &--asunder
+            flex-direction: column
+        &__wrapper
+            width: 100%
+
+@media (min-width: 768px)
+    .tabs
+        &__select
+            display: none
+
+@media (max-width: 767px)
+    .content
+        width: 768px
+    .tabs
+        &__list
+            display: none
+
+@media (min-width: 576px) and (max-width: 767px)
+    .works
+        &__item
+            max-width: 48%
+            &:nth-child(3n - 1)
+                margin: 0
+            &:nth-child(2n)
+                margin-left: 4%
+            &:nth-child(n + 3)
+                margin-top: 4%
+    .tabs
+        &__content
+            padding: 20px
+    
+@media (max-width: 575px)
+    .heading
+        &__title
+            max-width: 75%
+    .auth-form
+        &__checkbox-group
+            flex-wrap: wrap
+            .custom-checkbox + .custom-checkbox
+                margin-left: 0
+            .custom-checkbox
+                max-width: 48%
+                &:nth-child(2n)
+                    margin-left: 4%
+                &:nth-child(n + 3)
+                    margin-top: 15px
+    .tabs
+        &__wrapper
+            flex-direction: column
+        &__elem
+            max-width: 100%
+        &__elem + &__elem
+            margin-top: 30px
+        &__content
+            padding: 20px 10px
+    .corps
+        &__item
+            align-items: flex-start
+            flex-wrap: wrap
+            padding: 16px 0
+        &__name
+            max-width: 100%
+        &__profile,
+        &__price
+            margin-top: 15px
+            width: 50%
+        &__price
+            text-align: right
+        &__bottom
+            flex-direction: column
+            .corps__btn
+                font-size: 18px
+        &__summary
+            margin-top: 20px
+            margin-left: 0
+    .works
+        &__item
+            max-width: 100%
+            text-align: center
+            &:nth-child(3n - 1)
+                margin: 0
+        &__item + &__item
+            margin-top: 20px
+
+@media (max-width: 419px)
+    .tabs
+        &__select
+            padding: 20px 14px
+            font-size: 20px

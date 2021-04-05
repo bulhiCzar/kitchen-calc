@@ -1,0 +1,23 @@
+export const HANDLER_MIS = 'CALC/HANDLER_MIS'
+export const ADD_MIS = 'CALC/ADD_MIS'
+export const COPY_MIS = 'CALC/COPY_MIS'
+export const DEL_MIS = 'CALC/DEL_MIS'
+
+export const ADD_CONF = 'CALC/ADD_CONF'
+export const COPY_CONF = 'CALC/COPY_CONF'
+export const DEL_CONF = 'CALC/DEL_CONF'
+export const ITEM_CONF = 'CALC/ITEM_CONF'
+export const DETAILS_CONF = 'CALC/DETAILS_CONF'
+export const HANDLER_CONF = 'CALC/HANDLER_CONF'
+export const CLEAR_CONF = 'CALC/CLEAR_CONF'
+
+export const ADD_DETAILS = 'CALC/ADD_DETAILS'
+export const DEL_DETAILS = 'CALC/DEL_DETAILS'
+export const COPY_DETAILS = 'CALC/COPY_DETAILS'
+export const SECTION_DETAIL = 'CALC/SECTION_DETAIL'
+export const HANDLER_DETAIL = 'CALC/HANDLER_DETAIL'
+
+export const HANDLER_PERCENT = 'CALC/HANDLER_PERCENT'
+
+
+export const LOAD_DATA = 'APP/LOAD_DATA'
